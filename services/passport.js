@@ -12,9 +12,8 @@ passport.use(new GoogleStrategy({
         callbackURL: '/auth/google/callback'
     },
     (accessToken, refreshToken, profile, done) => {
-        new User({
-            googleID: profile.id
-        })
-        .save()
+        new User ({
+            googleId: profile.id
+        }).save()
     }
 ))
