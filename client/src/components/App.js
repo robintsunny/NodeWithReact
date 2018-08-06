@@ -9,7 +9,18 @@ const Landing = () => <h2>Landing</h2>
 
 const App = () => {
     return (
-        <div>YOLO</div>
+        <div>
+            <BrowserRouter>
+                <div>
+                    <Header />
+                    <Route exact path="/surveys" component={Dashboard}/>
+                    <Route exact path="/surveys/new" component={SurveyNew}/>
+                    <Route exact path="/" component={Landing}/>
+
+                </div>
+            </BrowserRouter>
+
+        </div>
     )
 }
 
