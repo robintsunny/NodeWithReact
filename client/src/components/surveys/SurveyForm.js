@@ -48,7 +48,7 @@ class SurveyForm extends React.Component {
 function validate(values) {
     const errors = {};
 
-    errors.emails = validateEmails(values.emails || '')
+    errors.recipients = validateEmails(values.recipients || '')
 
 
     if (!values.title) {    
@@ -63,8 +63,8 @@ function validate(values) {
         errors.body = 'Must provide body'
     }
 
-    if (!values.emails) {
-        errors.emails = 'Must provide email(s)'
+    if (!values.recipients) {
+        errors.recipients = 'Must provide email(s)'
     }
 
 
